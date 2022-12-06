@@ -161,18 +161,6 @@ class rbTree:
                 break
         return countries
 
-    # adjusted code from https://www.programiz.com/dsa/red-black-tree for deletion section
-    # transplant the red-black tree when we find the desired node to delete
-    def transplant(self, node1, node2):
-        if node1.parent is None:
-            self.n.root = node2
-        elif node1 == node1.parent.left:
-            node1.parent.left = node2
-        else:
-            node1 = node2
-
-        node2.parent = node1.parent
-
     # find the smallest value of a tree
     def min(self, node):
         while node.left != self.n:
